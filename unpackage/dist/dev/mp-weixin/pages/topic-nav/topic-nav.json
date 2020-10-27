@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "话题分类",
+  "usingComponents": {
+    "roll-tab-bar": "/components/roll-tab-bar/roll-tab-bar",
+    "topic-update": "/components/topic-update/topic-update",
+    "load-more": "/components/load-more/load-more"
+  }
+}

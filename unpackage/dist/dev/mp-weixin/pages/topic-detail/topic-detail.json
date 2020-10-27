@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "topic-title": "/components/topic-title/topic-title",
+    "roll-tab-bar": "/components/roll-tab-bar/roll-tab-bar",
+    "common-list": "/components/common-list/common-list",
+    "load-more": "/components/load-more/load-more"
+  }
+}

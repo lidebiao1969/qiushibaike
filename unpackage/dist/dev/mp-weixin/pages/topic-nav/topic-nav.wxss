@@ -1,0 +1,10 @@
+
+.nothing{
+	background-color: #FFFFFF;
+	text-align: center;
+	margin-top: 30rpx;
+}
+.nothing image{
+	width: 80%;
+}
+

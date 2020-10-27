@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "roll-tab-bar": "/components/roll-tab-bar/roll-tab-bar",
+    "index-list": "/components/index-list/index-list",
+    "load-more": "/components/load-more/load-more"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "roll-tab-bar": "/components/roll-tab-bar/roll-tab-bar"
+  },
+  "component": true
+}

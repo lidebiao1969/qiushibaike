@@ -1,0 +1,132 @@
+
+.list-box{
+	width: 90%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+}
+.index-list1{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	margin-top: 10px;
+}
+.img1{
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+}
+.nick{
+	margin: 0 10px;
+	font-size: 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.index-title{
+	 
+	display: -webkit-box;
+	 
+	display: -webkit-flex;
+	 
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+.index-guanzi{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.guanzi{
+	margin: 10px 10px;
+	background-color: yellow;
+	border-radius: 20%;
+}
+.index-list2{
+	width: 100%;
+	
+	margin: 10rpx;
+}
+.list2-img{
+	width: 100%;
+	height: 300rpx;
+}
+.index-list{
+	padding: 5px;
+	border-bottom: 1px solid #efefef;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.comment{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.comment-ding{
+	margin-left: 5rpx;
+}
+.comment-share{
+	margin-right: 5rpx;
+}
+.index-list3{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.index-video{
+	position: relative;
+	width: 100%;
+	height: 300rpx;
+}
+.index-play{
+	position: absolute;
+	font-size: 30px;
+	right: 50%;
+	top:50%
+}
+.index-message{
+	position: absolute;
+	font-size: 30rpx;
+	bottom: 5px;
+	right: 10px;
+	color: red;
+	background-color: #0077AA;
+	border-radius: 10px;
+	z-index: 3;
+}
+

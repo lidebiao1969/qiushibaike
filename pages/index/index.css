@@ -1,0 +1,84 @@
+
+.page{
+	background-color: white;
+}
+.index-list1{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.img1{
+	width: 50upx;
+	height: 50upx;
+	border-radius: 50%;
+}
+.nick{
+	margin: 0 10px;
+	font-size: 10px;
+	display: flex;
+	flex-direction: column;
+}
+ .index-title{
+	 
+	display: flex;
+	flex-direction: row;
+}
+.index-guanzi{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.guanzi{
+	margin: 10px 10px;
+	background-color: yellow;
+	border-radius: 20%;
+}
+.index-list2{
+	width: 100%;
+	
+	margin: 10upx ;
+}
+.list2-img{
+	width: 100%;
+	height: 300px;
+}
+ 
+
+   
+.index-list{
+	padding: 5px;
+	border-bottom: 1px solid #efefef;
+	display: flex;
+	flex-direction: column;
+}
+.comment{
+	display: flex;
+	justify-content: space-between;
+}
+.comment-ding{
+	margin-left: 5upx;
+}
+.comment-share{
+	margin-right: 5upx;
+}
+.index-video{
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+.index-play{
+	position: absolute;
+	font-size: 30px;
+	right: 50%;
+	top:50%
+}
+.index-message{
+	position: absolute;
+	font-size: 30upx;
+	bottom: 5px;
+	right: 10px;
+	color: red;
+	background-color: #0077AA;
+	border-radius: 10px;
+	z-index: 3;
+}

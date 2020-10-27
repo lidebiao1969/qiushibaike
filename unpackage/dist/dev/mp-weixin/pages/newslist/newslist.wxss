@@ -1,0 +1,25 @@
+
+.page.data-v-76ae34b4{
+		margin: 0 15rpx;
+}
+.search-input.data-v-76ae34b4{
+	margin-top: 40rpx;
+	padding: 20rpx 0;
+}
+.search-input>input.data-v-76ae34b4{
+	background: #F4F4F4;
+	
+	border-radius: 20rpx;
+}
+.topic-search-input.data-v-76ae34b4{
+	text-align: center;
+}
+.topic-swiper.data-v-76ae34b4{
+	padding-bottom: 20rpx;
+}
+.topic-swiper image.data-v-76ae34b4{
+		width: 100%;
+}
+	
+
+

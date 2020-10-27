@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "news-nav-tab-bar": "/components/news-nav-tab-bar/news-nav-tab-bar",
+    "common-list": "/components/common-list/common-list",
+    "load-more": "/components/load-more/load-more",
+    "hot-classify": "/components/hot-classify/hot-classify",
+    "topic-update": "/components/topic-update/topic-update"
+  }
+}
