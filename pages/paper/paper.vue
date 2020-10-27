@@ -51,9 +51,58 @@
 			}
 			
 		},
+		onPullDownRefresh() {
+			this.getData();
+		},
 		methods: {
 			go(index){
 				console.log(index)
+			},
+			getData(){
+				setTimeout(()=>{
+				let arr=[{
+					titlepic:"../../static/HEAD/mm1.png",
+					nickname:"昵称1111",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:123
+				},
+				{
+					titlepic:"../../static/HEAD/mm2.png",
+					nickname:"昵称2222",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:0
+				},{
+					titlepic:"../../static/HEAD/mm1.png",
+					nickname:"昵称3333",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:12
+				},{
+					titlepic:"../../static/HEAD/mm2.png",
+					nickname:"昵称4444",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:0
+				},{
+					titlepic:"../../static/HEAD/mm1.png",
+					nickname:"昵称5555",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:12
+				},{
+					titlepic:"../../static/HEAD/mm2.png",
+					nickname:"昵称6666",
+					time:"13:27",
+					context:"赵丽颖一句话打脸",
+					badget:0
+				}]	;
+				this.list=arr;
+				uni.stopPullDownRefresh();
+				},2000);
+				
+				
 			}
 		}
 	}
