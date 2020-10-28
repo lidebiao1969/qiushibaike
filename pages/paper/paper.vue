@@ -1,5 +1,17 @@
 <template>
 	<view class="page">
+		
+		<view class="paper-right-popup-mask">
+			<view class="paper-right-popup" v-show="show">
+				<view class="u-f-ac" >
+					<view class="iconfont icon-soushuo-copy" hover-class="paper-right-popup-h"> 添加糗友</view>
+				</view>
+				<view class="u-f-ac">
+					<view class="iconfont icon-qingchu1" hover-class="paper-right-popup-h"> 清除</view>
+				</view>
+			</view>
+		</view>
+		
 		<view v-for="(item,index) in list " :key="index" @click="go(index)" >
 			<paper-list :list="item" ></paper-list>
 		</view>
@@ -10,6 +22,8 @@
 	export default{
 		data(){
 			return{
+				show:true,
+				loadtext:"上拉加载更多",
 				list:[{
 					titlepic:"../../static/HEAD/mm1.png",
 					nickname:"昵称",
@@ -53,6 +67,9 @@
 		},
 		onPullDownRefresh() {
 			this.getData();
+		},
+		onReachBottom(){
+			this.getD();
 		},
 		methods: {
 			go(index){
@@ -103,8 +120,26 @@
 				},2000);
 				
 				
-			}
+			},
+		
+		getD(){				
+			if (this.loadtext!='上拉加载更多'){return;}
+				
+				this.loadtext='加载中';
+					uni.showToast({
+						icon: 'none',
+						title: "加载中" 
+					})
+				setTimeout(()=>{
+						let obj=this.list[1];
+				this.list.push(obj);
+				this.loadtext='上拉加载更多';
+					},2000);
+					
 		}
+		//点位		
+		}
+		
 	}
 </script>
 
@@ -113,5 +148,18 @@
 		margin: 0 20upx;
 		}
 	
-	
+	.paper-right-popup{
+		padding: 20upx 20upx;
+		position: fixed;
+		right: 0;
+		top:100upx;
+		z-index: 100;
+		width: 250upx;
+		height: 120upx;
+		background-color: #D8D8D8;
+		box-shadow: 1upx 1upx 20upx 2upx #cccccc;
+	}
+	.paper-right-popup-h{
+		background-color: red;
+	}
 </style>
