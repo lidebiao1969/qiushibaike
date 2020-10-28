@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
-    "multi-images": "/components/multi-images/multi-images",
-    "zi-popup": "/components/zi-popup/zi-popup"
-  }
-}
