@@ -72,12 +72,7 @@
 									 "fontSrc":"/static/icon.ttf",
 									  "text": "\ue70e",           									
 									"fontSize":"20px"
-									},{
-										
-										"fontSrc":"/static/icon.ttf",
-										 "text": "\ue60d ",           									
-										 "fontSize":"20px"
-           						}
+									}
            	                ]
            
            	                }
