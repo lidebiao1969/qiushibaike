@@ -111,7 +111,7 @@
 				this.newslist = newslist || [];
 				//console.log(this.newslist.length)
 				
-				console.log(this.newslist) 
+				//console.log(this.newslist) 
 			},
 		
 			

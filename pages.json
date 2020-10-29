@@ -30,8 +30,8 @@
 								"disabled": true
 							}
 
-				                }
-				            }
+				        }
+				 }
 			}
 		}
 	    
@@ -124,6 +124,39 @@
 					
 				}
 			}
+        }
+        ,{
+            "path" : "pages/user-list/user-list",
+            "style": {
+            	
+            	  "app-plus": {
+            		"bounce": "none", 
+					"animationType":"slide-in-left",
+					"scrollIndicator":"none",
+            		"titleNView": {
+						
+						"autoBackButton":false,
+            			"buttons": [
+            				//原生标题栏按钮配置,''
+            				
+            			   {
+							 "float":"right",
+							 "color":"#000000",
+							 "colorPressed":"#888888",
+							  "text": "取消",
+								 "fontSize":"16px"
+            						}
+            	                ],
+            				"searchInput": {
+            					"backgroundColor": "#f7f7f7",
+            					"borderRadius": "6px", //输入框圆角
+            					"placeholder": "请输入搜索内容",
+            					"disabled": true
+            				}
+            
+            	        }
+            	 }
+            }
         }
     ],
 	"globalStyle": {

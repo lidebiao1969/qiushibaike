@@ -1,13 +1,13 @@
 <template>
 	<view class="page">
 		
-		<view class="paper-right-popup-mask">
+		<view class="paper-right-popup-mask" v-show="show" @tap="hidepopup">
 			<view class="paper-right-popup" v-show="show">
-				<view class="u-f-ac" >
+				<view class="u-f-ac" @tap="addfriend">
 					<view class="iconfont icon-soushuo-copy" hover-class="paper-right-popup-h"> 添加糗友</view>
 				</view>
-				<view class="u-f-ac">
-					<view class="iconfont icon-qingchu1" hover-class="paper-right-popup-h"> 清除</view>
+				<view class="u-f-ac" @tap="clear">
+					<view class="iconfont icon-qingchu1" hover-class="paper-right-popup-h"> 清除糗友</view>
 				</view>
 			</view>
 		</view>
@@ -22,7 +22,7 @@
 	export default{
 		data(){
 			return{
-				show:true,
+				show:false,
 				loadtext:"上拉加载更多",
 				list:[{
 					titlepic:"../../static/HEAD/mm1.png",
@@ -71,7 +71,35 @@
 		onReachBottom(){
 			this.getD();
 		},
+		onNavigationBarButtonTap(e) {
+			//console.log(e)
+		switch(e.index){
+			 case 0:
+			 
+			uni.navigateTo({
+				url:"../user-list/user-list"
+			});
+			break;
+			case 1:
+			this.show=true;
+			break;
+			}
+		},
 		methods: {
+			addfriend(){
+				console.log("addfriend")
+				this.hidepopup();
+			},
+			clear(){
+				console.log("clearfriend")
+				this.hidepopup();
+			},
+			showpopup(){
+				this.show=true;
+			},
+			hidepopup(){
+			this.show=false;	
+			},
 			go(index){
 				console.log(index)
 			},
@@ -147,7 +175,15 @@
 	.page{
 		margin: 0 20upx;
 		}
-	
+	.paper-right-popup-mask{
+		position: fixed;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 10;
+		/* background-color: #669900; */
+	}
 	.paper-right-popup{
 		padding: 20upx 20upx;
 		position: fixed;
