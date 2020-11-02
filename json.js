@@ -1,5 +1,5 @@
 
-import URL from './common/url.js'
+/* import URL from './common/url.js' */
 /* 首页导航条 */
 const navBars=[
 	{
@@ -68,30 +68,27 @@ const newslist=[
 	{  loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z1.png",
+			userpic:URL.url+"/zzf/z1.png",
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"我想出手，就那么难。。。",
 			type:"pic",
-			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z1.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z1.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
 				},
 				commentnum:2,
 				sharenum:5
-								
+
 		},
 		{
-			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z2.png",
-			nickname:"zzf",
+			userpic:URL.url+"/zzf/z2.png",			nickname:"zzf",
 			showupz:true,
 			title:"我想出手，就那么难。。。",
 			type:"pic",
-			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z2.png",
-			playnum:"20w",
+			titlepic:URL.url+"/zzf/z2.png",			playnum:"20w",
 			timelong:"2:47",
 			infornum:{
 				index:0,
@@ -105,32 +102,28 @@ const newslist=[
 	{	loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z3.png",
-			nickname:"zzf",
+			userpic:URL.url+"/zzf/z3.png",			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"gggggggg。。。",
 			type:"pic",
-			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z3.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z3.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
 				},
 				commentnum:2,
 				sharenum:5
-								
+
 		},
 		{
-			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z4.png",
-			nickname:"zzf",
+			userpic:URL.url+"/zzf/z4.png",			nickname:"zzf",
 			showupz:true,
 			title:"hihihi...。",
 			type:"pic",
 			playnum:"20w",
 			timelong:"2:47",
-			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z4.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z4.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
@@ -141,7 +134,7 @@ const newslist=[
 	]},
 	{
 		loadtext:'上拉加载更多',
-		
+
 	},
 	{loadtext:'上拉加载更多',
 		},
@@ -152,15 +145,15 @@ const newslist=[
 		loadtext:'上拉加载更多',
 		},
 	{
-		
+
 		},
 	{
-		
+
 		},
 	{
-		
+
 		}
-	
+
 ]
 
 const topiclist=[
@@ -210,7 +203,7 @@ const topiclist=[
 		]},
 	{
 		loadtext:'上拉加载更多',
-		
+
 	},
 	{loadtext:'上拉加载更多',
 		},
@@ -221,15 +214,15 @@ const topiclist=[
 		loadtext:'上拉加载更多',
 		},
 	{
-		
+
 		},
 	{
-		
+
 		},
 	{
-		
+
 		}
-	
+
 ]
 export default {
 	navBars,

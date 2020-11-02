@@ -1,27 +1,45 @@
 <template>
 	<view class="page">
+
+		<!-- 操作菜单 -->
 		
-		<view class="paper-right-popup-mask" v-show="show" @tap="hidepopup">
+
+	
+	<!-- 	<view class="paper-right-popup-mask" v-show="show" @tap="hidepopup">
+
 			<view class="paper-right-popup" v-show="show">
-				<view class="u-f-ac" @tap="addfriend">
-					<view class="iconfont icon-soushuo-copy" hover-class="paper-right-popup-h"> 添加糗友</view>
+
+				<view class="u-f-ac" hover-class="paper-right-popup-h" @tap='addfriend'>
+
+					<view class="iconfont icon-soushuo-copy" ></view>
+					 添加糗友
+
 				</view>
-				<view class="u-f-ac" @tap="clear">
-					<view class="iconfont icon-qingchu1" hover-class="paper-right-popup-h"> 清除糗友</view>
-				</view>
+				 <view class="u-f-ac" hover-class="paper-right-popup-h" @tap="clear">
+					<view class="iconfont icon-qingchu1"> </view>
+					 清除糗友
+				</view> 
 			</view>
-		</view>
+		</view> -->
+		
+		<paper-right-popup :show="show" 
+			@hidepopup="hidepopup" 
+			@addfriend="addfriend" 
+			@clear="clear" >
+		</paper-right-popup>
+		
 		
 		<view v-for="(item,index) in list " :key="index" @click="go(index)" >
 			<paper-list :list="item" ></paper-list>
 		</view>
-		<load-more loadtext="上拉加载更多"></load-more>
+		<load-more :loadtext="loadtext"></load-more>
 	</view>
 </template>
 <script>
 	export default{
 		data(){
 			return{
+				
 				show:false,
 				loadtext:"上拉加载更多",
 				list:[{
@@ -65,43 +83,50 @@
 			}
 			
 		},
+		
 		onPullDownRefresh() {
 			this.getData();
 		},
 		onReachBottom(){
 			this.getD();
 		},
+
 		onNavigationBarButtonTap(e) {
-			//console.log(e)
+			// console.log(e)
 		switch(e.index){
 			 case 0:
-			 
-			uni.navigateTo({
-				url:"../user-list/user-list"
-			});
+				uni.navigateTo({
+					url:"../user-list/user-list"
+				});
 			break;
 			case 1:
-			this.show=true;
+				this.show=true;
 			break;
-			}
+			} 
 		},
+
 		methods: {
 			addfriend(){
-				console.log("addfriend")
-				this.hidepopup();
+				console.log("加好友")
+				this.hidepopup()
 			},
+			
 			clear(){
 				console.log("clearfriend")
-				this.hidepopup();
+				this.hidepopup()
 			},
 			showpopup(){
-				this.show=true;
+				this.show=true
 			},
 			hidepopup(){
-			this.show=false;	
+				this.show=false
 			},
+			
+
 			go(index){
-				console.log(index)
+				uni.navigateTo({
+					url:"../user-chat/user-chat"
+				})
 			},
 			getData(){
 				setTimeout(()=>{
@@ -171,31 +196,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.page{
 		margin: 0 20upx;
 		}
-	.paper-right-popup-mask{
-		position: fixed;
-		right: 0;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
-		/* background-color: #669900; */
-	}
-	.paper-right-popup{
-		padding: 20upx 20upx;
-		position: fixed;
-		right: 0;
-		top:100upx;
-		z-index: 100;
-		width: 250upx;
-		height: 120upx;
-		background-color: #D8D8D8;
-		box-shadow: 1upx 1upx 20upx 2upx #cccccc;
-	}
-	.paper-right-popup-h{
-		background-color: red;
-	}
+	
+	
 </style>
