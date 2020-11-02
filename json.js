@@ -68,13 +68,13 @@ const newslist=[
 	{  loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:URL.url+"/zzf/z1.png",
+			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z1.png",
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"我想出手，就那么难。。。",
 			type:"pic",
-			titlepic:URL.url+"/zzf/z1.png",
+			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z1.png",
 			infornum:{
 				index:0,
 				dingnum:10,
@@ -85,12 +85,12 @@ const newslist=[
 								
 		},
 		{
-			userpic:URL.url+"/zzf/z2.png",
+			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z2.png",
 			nickname:"zzf",
 			showupz:true,
 			title:"我想出手，就那么难。。。",
 			type:"pic",
-			titlepic:URL.url+"/zzf/z2.png",
+			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z2.png",
 			playnum:"20w",
 			timelong:"2:47",
 			infornum:{
@@ -105,13 +105,13 @@ const newslist=[
 	{	loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:URL.url+"/zzf/z3.png",
+			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z3.png",
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"gggggggg。。。",
 			type:"pic",
-			titlepic:URL.url+"/zzf/z3.png",
+			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z3.png",
 			infornum:{
 				index:0,
 				dingnum:10,
@@ -122,14 +122,14 @@ const newslist=[
 								
 		},
 		{
-			userpic:URL.url+"/zzf/z4.png",
+			userpic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z4.png",
 			nickname:"zzf",
 			showupz:true,
 			title:"hihihi...。",
 			type:"pic",
 			playnum:"20w",
 			timelong:"2:47",
-			titlepic:URL.url+"/zzf/z4.png",
+			titlepic:"https://github.com/lidebiao1969/qiushibaike/blob/master/static/zzf/z4.png",
 			infornum:{
 				index:0,
 				dingnum:10,
