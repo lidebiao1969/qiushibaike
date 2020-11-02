@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11067062",
+      "name": "发送",
+      "font_class": "fasong",
+      "unicode": "e6eb",
+      "unicode_decimal": 59115
+    },
+    {
+      "icon_id": "5132195",
+      "name": "plus",
+      "font_class": "plus",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "5846132",
+      "name": "picture selected",
+      "font_class": "pictureselected",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "15347660",
+      "name": "picture selected",
+      "font_class": "pictureselected1",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "7705482",
       "name": "comment-plus",
       "font_class": "comment-plus",
