@@ -11,10 +11,12 @@
 					<!-- 第一行 -->
 					<view class="common-list-r-1  u-f-ac" >
 						<view >
-							{{item.username}}
-							<text class="iconfont " :class="[item.sex==0?'icon-nan':'icon-nv']">
-							{{item.age}}
-							</text>
+							<view > {{item.username}}</view>
+							<view >
+								<text class="iconfont " :class="[item.sex==0?'icon-nan':'icon-nv']">
+								{{item.age}}
+								</text>
+							</view>
 						</view>
 						<view class="iconfont icon-add" v-if="!isguanzi" @tap="guanzi">
 							关注

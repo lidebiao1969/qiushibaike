@@ -6,6 +6,8 @@
 				
 				  "app-plus": {
 					"bounce": "none", 
+					"animationType":"slide-in-left",
+					"scrollIndicator":"none",
 					"titleNView": {
 						"buttons": [
 							//原生标题栏按钮配置,''
@@ -30,8 +32,8 @@
 								"disabled": true
 							}
 
-				                }
-				            }
+				        }
+				 }
 			}
 		}
 	    
@@ -39,14 +41,13 @@
         ,{
             "path" : "pages/submit/submit",
             "style" : {
-							"app-plus": {
-							                  "bounce": "none", 
-							                  "titleNView": false
+				"app-plus": {
+						  "bounce": "none", 
+						  "titleNView": false
 							
+							}
 						}
-        }
-				}
-        ,{
+		},{
             "path" : "pages/home/home",
             "style" : {}
         }
@@ -119,6 +120,88 @@
 					
 				}
 			}
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style": {
+            	
+            	  "app-plus": {
+            		"bounce": "none", 
+            		"titleNView": {
+						"backButton":false,
+            			"searchInput": {
+								"align":"left",
+            					"backgroundColor": "#f7f7f7",
+            					"borderRadius": "6px", //输入框圆角
+            					"placeholder": "请输入搜索内容",
+            					"disabled": false
+            				},
+						"buttons": [
+							//原生标题栏按钮配置,''
+						   {
+							 "float":"right",
+							  "text": "取消  ",
+							  "color":"#990055",
+							  "colorPressed":"#01DF3A",
+							 "fontSize":"14px"
+							}
+							]
+            	        }
+            	 }
+            }
+        }
+        ,{
+            "path" : "pages/user-list/user-list",
+            "style": {
+            	
+            	  "app-plus": {
+					"animationType":"slide-in-left",
+					"scrollIndicator":"none",
+            		"bounce": "none", 
+            		"titleNView": {
+            			"autoBackButton":false,
+            			"searchInput": {
+            					"align":"left",
+            					"backgroundColor": "#f7f7f7",
+            					"borderRadius": "6px", //输入框圆角
+            					"placeholder": "请输入搜索内容",
+            					"disabled": false
+            				},
+            			"buttons": [
+            				//原生标题栏按钮配置,''
+            			   {
+            				 "float":"right",
+            				  "text": "取消  ",
+            				  "color":"#990055",
+            				  "colorPressed":"#01DF3A",
+            				 "fontSize":"14px"
+            				}
+            				]
+            	        }
+            	 }
+            }
+        }
+        ,{
+            "path" : "pages/user-chat/user-chat",
+             "style": {
+				 "navigationBarTitleText":"聊天页面", 
+            	  "app-plus": {
+            		"bounce": "none", 
+            		"titleNView": {
+            					/* "titleText":"聊天页面", */
+            			"buttons": [
+            				//原生标题栏按钮配置,''
+								{
+									 "float":"right",
+									 "fontSrc":"/static/iconfont.ttf",
+									  "text": "\ue602",           									
+									"fontSize":"20px"
+									}
+            	                ]
+            
+            	                }
+            	            }
+            }
         }
     ],
 	"globalStyle": {

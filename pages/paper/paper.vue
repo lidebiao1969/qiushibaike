@@ -1,22 +1,33 @@
 <template>
 	<view class="page">
+
 		<!-- 操作菜单 -->
-		 <view class="paper-right-popup-mask">
+		
+
+	
+	<!-- 	<view class="paper-right-popup-mask" v-show="show" @tap="hidepopup">
+
 			<view class="paper-right-popup" v-show="show">
-				<view class="u-f-ac"  @tap='addfriend'>
-					<view class="iconfont icon-soushuo-copy"
-					 hover-class="paper-right-popup-h"> 
-					 </view>
+
+				<view class="u-f-ac" hover-class="paper-right-popup-h" @tap='addfriend'>
+
+					<view class="iconfont icon-soushuo-copy" ></view>
 					 添加糗友
+
 				</view>
-				<view class="u-f-ac" @tap="clear">
-					<view class="iconfont icon-qingchu1" 
-					hover-class="paper-right-popup-h" >
-					 </view>
-					 清除缓存
-				</view>
+				 <view class="u-f-ac" hover-class="paper-right-popup-h" @tap="clear">
+					<view class="iconfont icon-qingchu1"> </view>
+					 清除糗友
+				</view> 
 			</view>
-		</view> 
+		</view> -->
+		
+		<paper-right-popup :show="show" 
+			@hidepopup="hidepopup" 
+			@addfriend="addfriend" 
+			@clear="clear" >
+		</paper-right-popup>
+		
 		
 		<view v-for="(item,index) in list " :key="index" @click="go(index)" >
 			<paper-list :list="item" ></paper-list>
@@ -28,7 +39,8 @@
 	export default{
 		data(){
 			return{
-				show:true,
+				
+				show:false,
 				loadtext:"上拉加载更多",
 				list:[{
 					titlepic:"../../static/HEAD/mm1.png",
@@ -78,14 +90,29 @@
 		onReachBottom(){
 			this.getD();
 		},
-		
+
+		onNavigationBarButtonTap(e) {
+			// console.log(e)
+		switch(e.index){
+			 case 0:
+				uni.navigateTo({
+					url:"../user-list/user-list"
+				});
+			break;
+			case 1:
+				this.show=true;
+			break;
+			} 
+		},
+
 		methods: {
 			addfriend(){
 				console.log("加好友")
 				this.hidepopup()
 			},
+			
 			clear(){
-				console.log("清除好友")
+				console.log("clearfriend")
 				this.hidepopup()
 			},
 			showpopup(){
@@ -94,9 +121,12 @@
 			hidepopup(){
 				this.show=false
 			},
+			
+
 			go(index){
-				console.log(index);
-				this.show=false;
+				uni.navigateTo({
+					url:"../user-chat/user-chat"
+				})
 			},
 			getData(){
 				setTimeout(()=>{
@@ -161,12 +191,6 @@
 					
 		}
 		//点位		
-		},
-		onNavigationBarButtonTap(e) {
-			//console.log(e);
-			if(e.index==1){
-				this.showpopup()
-			} 
 		}
 		
 	}
@@ -176,32 +200,6 @@
 	.page{
 		margin: 0 20upx;
 		}
-	.u-f-ac{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.paper-right-popup{
-		padding: 20upx 20upx;
-		position: fixed;
-		right: 0;
-		
-		/* #ifdef APP-PLUS */
-		top:10upx;
-		/* #endif */
-		/* #ifdef H5 */
-		top:70upx;
-		/* #endif */
-		z-index: 100;
-		width: 250upx;
-		
-		background-color: #FFFFFF;
-		box-shadow: 1upx 1upx 20upx 2upx #cccccc;
-	}
-	.paper-right-popup-h{
-		background-color: red;
-	}
-	.paper-right-popup>view>view{
-		margin-right: 20upx;
-	}
+	
+	
 </style>

@@ -1,19 +1,6 @@
 <template>
 	<view >
-		<!--  <view class="uni-tab-bar">
-			<scroll-view  scroll-x class="uni-swiper-tab" >
-				<block v-for="(tab,index) in tabBars" :key="tab.id"  >
-					<view  class="swiper-tab-list" 
-					 :class="{'active':(tabIndex==index)}"
-					 @tap="tabtap(index)">
-					 {{tab.name}}
-					 
-					  <view class="uni-tab-line"></view> 
-						</view>
-				</block>
-				
-			</scroll-view>
-		</view> -->
+	
 		 <roll-tab-bar 
 		:tabBars="tabBars"	
 		:tabIndex="tabIndex" 
@@ -66,15 +53,16 @@
 				tabIndex:0,
 				tabBars: [],				
 				newslist:[]	
+				
 			} 
 		},
 		components:{
 			rollTabBar
 		},
-		onNavigationBarSearchInputClicked: () => {
-			/* uni.navigateTo({
-				url:"../submit/submit"
-			}) */
+		onNavigationBarSearchInputClicked () {
+			uni.navigateTo({
+				url:"../search/search"
+			}) 
 		},
 		onNavigationBarButtonTap(e) {
 		console.log(e)
@@ -137,13 +125,13 @@
 			})
 		setTimeout(()=>{
 				let obj={
-			userpic:URL.url+"/zzf/z1.png",
+			userpic:"../../static/zzf/z1.png",
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"我想出手，就那么难。。。",
 			type:"pic",
-			titlepic:URL.url+"/zzf/z1.png",
+			titlepic:"../../static/zzf/z1.png",
 			infornum:{
 				index:0,
 				dingnum:10,

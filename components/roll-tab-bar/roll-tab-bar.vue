@@ -7,7 +7,7 @@
 						 :class="{'active':(tabIndex==index)}"
 						 @tap="tabtap(index)"
 						 :style="scrollItemStyle">
-						 {{tab.name}}
+						 {{tab.name}}{{(tab.num)?tab.num:''}}
 						 
 							 <view class="uni-tab-line"></view> 
 							</view>
@@ -24,6 +24,7 @@
 		props:{
 			tabBars:Array,
 			tabIndex:Number,
+			
 			scrollStyle:{
 				type:String,
 				default:""

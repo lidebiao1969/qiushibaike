@@ -77,6 +77,9 @@
     },
     "h5" : {
         "title" : "仿糗事百科",
-        "domain" : "http://192.168.0.102:3000/"
+        "domain" : "https://gitee.com/lidebiao1969",
+        "router" : {
+            "base" : ""
+        }
     }
 }
