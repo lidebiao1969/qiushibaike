@@ -1,5 +1,5 @@
 
-/* import URL from './common/url.js' */
+ import URL from './common/url.js' 
 /* 首页导航条 */
 const navBars=[
 	{

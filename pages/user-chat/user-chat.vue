@@ -1,15 +1,18 @@
 <template>
 	<view class="page">
-		<!-- user-chat-list user-chat-me-->
-		<view class="user-chat-list ">
-			  <image src="../../static/HEAD/mm1.png" mode="widthFix" lazy-load></image> 
-			<view class="user-chat-list-body">
-				<!-- <image src="../../static/HEAD/man.png" mode="aspectFit"></image> -->
-				 <text>随便喝</text> 
-			</view>
-			
-		</view>
 		
+		<block  v-for="(item,index) in list" :key="index">
+		<!-- user-chat-list user-chat-me-->
+			<view style="text-align: center;">{{item.time}}</view>
+			<view class="user-chat-list " :class="item.isme?'user-chat-me':''">
+				  
+				 <image src="../../static/HEAD/mm1.png" mode="widthFix" lazy-load></image> 
+				<view class="user-chat-list-body">
+				 <image v-if="item.type=='img'"  :src="item.imgpic" mode="aspectFit"></image> 
+				 <text  v-if="item.type=='text'">随便喝</text> 
+				</view>
+			</view>
+		</block>
 
 		
 		
@@ -20,13 +23,45 @@
 </template>
 
 <script>
+	import utiltime from "../../common/util-time.js"
 	export default {
 		data() {
 			return {
-				text:""
+				text:"",
+				list:[
+					{
+						isme:true,
+						userpic:"../../static/HEAD/mm1.png",
+						type:"text",
+						content:"随便喝",
+						time:1604212628
+					},
+					{
+						isme:false,
+						userpic:"../../static/HEAD/mm2.png",
+						type:"img",
+						imgpic:"../../static/HEAD/man.png",
+						time:1604299028
+					}
+				]
+				
+				
+				
 			}
 		},
+		onReady() {
+			this.timeStamptoDate()
+		},
 		methods: {
+			
+			timeStamptoDate(){
+				let arr=this.list;
+				arr.forEach((v, i) => {
+					v.time=utiltime.timestampToTime(v.time)
+				});
+				this.list=arr;
+				//console.log(JSON.stringify(this.list));
+				},
 		submit(t){
 			console.log(t)
 			
@@ -67,8 +102,8 @@
 }
 
 .user-chat-list-body>image{
-	width: 200upx;
-	height: 200upx;
+	width: 100upx;
+	height: 100upx;
 }
 
 
