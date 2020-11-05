@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import dateutil from "../../common/util.js"
+	import timefrom from "../../common/timeFrom.js"
 	export default {
 		data() {
 			return {
@@ -139,17 +139,19 @@
 					
 					type:"img",//img
 					imgsrc:"../../static/HEAD/man.png",
-					time:"1604321072",
+					time:"1604543445",
 					id:'ss6'
 				}];
 				
 				var arr=list;
 				arr.forEach((v,i)=>{
 					//v.time=this.getLocalTime(v.time);
-					var a=dateutil.dateUtils.timestampToTime(v.time);
+					/* var a=dateutil.dateUtils.timestampToTime(v.time);
 					
-					v.time=dateutil.dateUtils.format(a);
-					
+					v.time=dateutil.dateUtils.format(a); */
+					 v.time=timefrom(v.time) 
+					/* console.log('timefrom: ');
+					console.log(timefrom); */
 				})
 				this.list=arr;
 				
@@ -166,9 +168,9 @@
 			}
 			//obj.time=this.getLocalTime(obj.time)
 			obj.time=new Date().getTime();
-			var a=dateutil.dateUtils.timestampToTime(obj.time);
-			obj.time=dateutil.dateUtils.format(a);
-			
+			/* var a=dateutil.dateUtils.timestampToTime(obj.time);
+			obj.time=dateutil.dateUtils.format(a); */
+			obj.time=timefrom(obj.time) 
 			obj.id='ss'+(this.list.length +1);
 			 obj.content=t;
 			// console.log(JSON.stringify(obj))
