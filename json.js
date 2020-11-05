@@ -72,7 +72,7 @@ const newslist=[
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
-			title:"我想出手，就那么难。。。",
+			title:"yyyyy。。。",
 			type:"pic",
 			titlepic:"/static/zzf/z1.png",
 			infornum:{
@@ -86,9 +86,9 @@ const newslist=[
 		},
 		{
 			userpic:"/static/zzf/z2.png",
-			nickname:"zzf",
+			nickname:"zzf11",
 			showupz:true,
-			title:"我想出手，就那么难。。。",
+			title:"6666g。。",
 			type:"pic",
 			titlepic:"/static/zzf/z2.png",
 			playnum:"20w",

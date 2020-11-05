@@ -3,12 +3,11 @@
 		<view class="list-box  animated fadeInLeft ">
 				 <view class="index-list1">
 						<view class="index-title">
-										
-									<image :src="item.userpic" mode="widthFix" class="img1"></image>
-									<view class="nick">
-										<text>{{item.nickname}}</text>
-										<text v-if="item.showupz">优秀up主</text>
-									</view>
+							<image :src="item.userpic" mode="widthFix" class="img1"></image>
+							<view class="nick">
+								<text>{{item.nickname}}</text>
+								<text v-if="item.showupz">优秀up主</text>
+							</view>
 						</view>
 						<view class="index-guanzi" @tap="guanzi">
 										<text class="guanzi iconfont" v-if="isguanzi" >&#xe664; 关注</text>		
@@ -17,18 +16,18 @@
 							</view>
 					</view> 
 					
-					<view class="index-list2">
+					<view class="index-list2" @tap="opendetail">
 						<text class="active-title">{{item.title}}</text>
 					</view>
 					
-					<view class="index-list3">	
+					<view class="index-list3" @tap="opendetail" >	
 							<view class="index-video" v-if="item.type=='pic'">
-							<image :src="item.titlepic" mode="aspectFill" class="list2-img"></image>
+								<image :src="item.titlepic" mode="aspectFill" class="list2-img"></image>
 							</view>
 							<view class="index-video" v-if="item.type=='video'">
-							<video show-fullscreen-btn :src="item.titlepic"  class="list2-img" objectFit="fill"></video>
-							<text class="iconfont index-play"> &#xe666;</text>
-							<text class="index-message">播放数:{{item.playnum}},时长:{{item.timelong}}</text>
+								<video show-fullscreen-btn :src="item.titlepic"  class="list2-img" objectFit="fill"></video>
+								<text class="iconfont index-play"> &#xe666;</text>
+								<text class="index-message">播放数:{{item.playnum}},时长:{{item.timelong}}</text>
 							</view>
 				
 					</view>
@@ -81,6 +80,11 @@
 			}
 		},
 		methods:{
+		opendetail(){
+				uni.navigateTo({
+					url:"../../pages/detail/detail?detailData="+ JSON.stringify(this.item)
+				})
+			},
 		guanzi(){ 
 			this.isguanzi=!this.isguanzi;
 			uni.showToast({

@@ -6,7 +6,7 @@
 				:style="{height:swiperHeight+'px'}"
 				@scroll="scroll">
 				<block  v-for="(item,index) in list" :key="index">
-					<view :id="item.id" class="user-chat-list-time">{{item.id}} </view> 
+					<view :id="item.id" class="user-chat-list-time">{{item.time}} </view> 
 					<view class="user-chat-list" :class="{'user-chat-me':item.isme}">
 						  <image :src="item.userpic" mode="widthFix" lazy-load></image> 
 						<view class="user-chat-list-body">
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	
+	import time from "../../common/util.js"
 	export default {
 		data() {
 			return {
@@ -47,8 +47,11 @@
 			// this.timeStamp();
 			this.loadData();
 		
-				this.scrollinto='ss'+this.list.length;  
-			
+				
+			this.$nextTick(function(){
+			this.scrollinto='ss'+(this.list.length);
+			console.log(this.scrollinto)
+			})
 			   
 			uni.getSystemInfo({
 				success: (res) => {
@@ -149,7 +152,8 @@
 				
 				var arr=list;
 				arr.forEach((v,i)=>{
-					v.time=this.getLocalTime(v.time);
+					 v.time=this.getLocalTime(v.time); 
+					/* v.time=time.dateUtils.format(v.time) */
 					
 				})
 				this.list=arr;
@@ -165,7 +169,9 @@
 					time:"1604315271",
 					id:''
 			}
-			obj.time=this.getLocalTime(obj.time)
+			var now=new Date().getDate();
+			
+			obj.time=this.getLocalTime(now);
 			obj.id='ss'+(this.list.length +1);
 			 obj.content=t;
 			// console.log(JSON.stringify(obj))

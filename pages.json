@@ -124,11 +124,14 @@
         ,{
             "path" : "pages/search/search",
             "style": {
-            	
+            	"enablePullDownRefresh":true,
+				
             	  "app-plus": {
+					 "scrollIndicator":"none",
             		"bounce": "none", 
             		"titleNView": {
-						"backButton":false,
+						"autoBackButton":true,
+						"homeButton":false,
             			"searchInput": {
 								"align":"left",
             					"backgroundColor": "#f7f7f7",
@@ -143,7 +146,7 @@
 							  "text": "取消  ",
 							  "color":"#990055",
 							  "colorPressed":"#01DF3A",
-							 "fontSize":"14px"
+							 "fontSize":"12px"
 							}
 							]
             	        }
@@ -201,6 +204,20 @@
             
             	                }
             	            }
+            }
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+            	"navigationBarTitleText":"详情页",
+            	"app-plus":{
+					"bounce":"none",
+					"scrollIndicator":"none",
+            		"titleNView":{
+            			"buttons":[{"type":"menu"}]
+            		}
+            		
+            	}
             }
         }
     ],
