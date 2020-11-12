@@ -1,5 +1,5 @@
 
-/* import URL from './common/url.js' */
+ import URL from './common/url.js' 
 /* 首页导航条 */
 const navBars=[
 	{
@@ -68,30 +68,32 @@ const newslist=[
 	{  loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:"/static/zzf/z1.png",
+			userpic:URL.url+"/zzf/z1.png",
 			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"互惠互信、精诚合作",
 			type:"pic",
-			titlepic:"/static/zzf/z1.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z1.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
 				},
 				commentnum:2,
 				sharenum:5
-								
+
 		},
 		{
+<<<<<<< HEAD
 			userpic:"/static/zzf/z2.png",
 			nickname:"zzf11",
+=======
+			userpic:URL.url+"/zzf/z2.png",			nickname:"zzf",
+>>>>>>> ff74095b8c45e7ae972abff4219f04f250d4667a
 			showupz:true,
 			title:"互惠互信、精诚合作2",
 			type:"pic",
-			titlepic:"/static/zzf/z2.png",
-			playnum:"20w",
+			titlepic:URL.url+"/zzf/z2.png",			playnum:"20w",
 			timelong:"2:47",
 			infornum:{
 				index:0,
@@ -105,32 +107,28 @@ const newslist=[
 	{	loadtext:'上拉加载更多',
 		list:[
 		{
-			userpic:"/static/zzf/z3.png",
-			nickname:"zzf",
+			userpic:URL.url+"/zzf/z3.png",			nickname:"zzf",
 			showupz:true,
 			isguanzi:true,
 			title:"互惠互信、精诚合作3",
 			type:"pic",
-			titlepic:"/static/zzf/z3.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z3.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
 				},
 				commentnum:2,
 				sharenum:5
-								
+
 		},
 		{
-			userpic:"/static/zzf/z4.png",
-			nickname:"zzf",
+			userpic:URL.url+"/zzf/z4.png",			nickname:"zzf",
 			showupz:true,
 			title:"互惠互信、精诚合作4",
 			type:"pic",
 			playnum:"20w",
 			timelong:"2:47",
-			titlepic:"/static/zzf/z4.png",
-			infornum:{
+			titlepic:URL.url+"/zzf/z4.png",			infornum:{
 				index:0,
 				dingnum:10,
 				cainum:9
@@ -141,7 +139,7 @@ const newslist=[
 	]},
 	{
 		loadtext:'上拉加载更多',
-		
+
 	},
 	{loadtext:'上拉加载更多',
 		},
@@ -152,15 +150,15 @@ const newslist=[
 		loadtext:'上拉加载更多',
 		},
 	{
-		
+
 		},
 	{
-		
+
 		},
 	{
-		
+
 		}
-	
+
 ]
 
 const topiclist=[
@@ -210,7 +208,7 @@ const topiclist=[
 		]},
 	{
 		loadtext:'上拉加载更多',
-		
+
 	},
 	{loadtext:'上拉加载更多',
 		},
@@ -221,15 +219,15 @@ const topiclist=[
 		loadtext:'上拉加载更多',
 		},
 	{
-		
+
 		},
 	{
-		
+
 		},
 	{
-		
+
 		}
-	
+
 ]
 export default {
 	navBars,
