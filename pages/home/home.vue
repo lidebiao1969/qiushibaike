@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		home
 	</view>
 </template>
 
@@ -11,6 +11,10 @@
 				
 			}
 		},
+		onNavigationBarButtonTap(e){
+			console.log(e.index)
+		},
+		
 		methods: {
 			
 		}

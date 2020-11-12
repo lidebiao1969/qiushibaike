@@ -9,22 +9,19 @@
 				
 				<view class="common-list-r">
 					<!-- 第一行 -->
-					<view class="common-list-r-1  u-f-ac" >
-						<view >
-							<view > {{item.nickname}}
-							
-								<text class="iconfont " :class="[item.sex==0?'icon-nan':'icon-nv']">
-								{{item.age}}
-								</text>
-							</view>
-							<view >	
-							
-							</view>
+						<view class="common-list-r-1  u-f-ac" >
+								<view > {{item.username}}
+									 <view class="sexage" :style="stylebackgrcolor">
+										<text class="iconfont " 
+										:class="[item.sex==0?'icon-nan':'icon-nv']">
+										{{item.age}}
+										</text>
+									</view> 
+								</view>
+								<view >
+									<text class="iconfont icon-close"></text>
+								</view>  
 						</view>
-						 <view >
-							<text class="iconfont icon-close"></text>
-						</view>  
-					</view>
 					<!-- 第二行 -->
 					<view class="common-list-r-12">{{item.day}}</view>
 					<view class="common-list-r-2">{{item.title}}</view>
@@ -78,6 +75,7 @@
 		data() {
 			return {
 				isguanzi:this.item.isguanzi,
+				stylebackgrcolor:(this.item.sex==0)?"background-color:blue":"background-color:pink"
 			}
 		},
 		
@@ -104,6 +102,7 @@
 /* 列表 */
 	.common-list{
 		display: flex;
+		
 		margin-top: 50upx;
 		padding: 10upx;
 		border-bottom: 1px solid #555555;
@@ -116,18 +115,31 @@
 		height: 90upx;
 		border-radius: 100%;
 	}
-	
+	.common-list-r-1>view:first-child{
+		display: flex;
+	}
+	.common-list-r-1>view:last-child{
+		margin-right: 20upx;
+	}
 	.u-f-ac{
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
 	}
 	.common-list-r{
 		display: flex;
 		flex:1;
 		flex-direction: column;
 		margin-left: 15upx;
+	}
+	.sexage{
+		width: 80upx;
+		height: 50upx;
+		line-height: 50upx;
+		border-radius: 30%;
+		text-align: center;
+		margin-left: 10upx;
 	}
 	.common-list-r-3{
 		position: relative;
@@ -161,8 +173,8 @@
 		border-radius: 20upx;
 	}
 	.common-list-share>image{
-		width: 200upx;
-		height: 150upx;
+		width: 100upx;
+		height: 100upx;
 		margin-right: 20upx;
 		border-radius: 10upx;
 	}

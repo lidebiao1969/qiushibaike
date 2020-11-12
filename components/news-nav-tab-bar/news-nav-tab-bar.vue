@@ -5,7 +5,7 @@
 			
 			<block slot="left">
 				<view class="nav-left">
-				<view class="iconfont icon-daitarenqian " ></view>
+				<view class="qfont icon-daitarenqian " ></view>
 				</view>
 			</block>
 		<!-- 	中间 -->
@@ -22,7 +22,7 @@
 			<!-- 右侧 -->
 			<block slot="right" >
 				<view class="nav-right">
-				<view class="iconfont icon-fatie1" ></view>
+				<view class="qfont icon-fatie1" ></view>
 				</view>
 			</block>
 				

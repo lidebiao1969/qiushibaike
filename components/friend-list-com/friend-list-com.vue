@@ -5,13 +5,13 @@
 				<view >
 					<view > {{item.username}}</view>
 					<view :class="[item.sex==0?'color-blue':'color-pink']">
-						<text class="iconfont " :class="[item.sex==0?'icon-nan':'icon-nv']" >
+						<text class="qfont " :class="[item.sex==0?'icon-nan':'icon-nv']" >
 						{{item.age}}
 						</text>
 					</view>
 				</view>
 				
-					<view :class="[isguanzhu?'iconfont icon-tianjiaqiushixiaozhitiao':'iconfont icon-tubiaoku--------']"  @tap="guanzi">
+					<view :class="[isguanzhu?'qfont icon-tianjiaqiushixiaozhitiao':'qfont icon-tubiaoku--------']"  @tap="guanzi">
 					</view>  
 				
 			</view>		

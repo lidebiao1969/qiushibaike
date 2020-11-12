@@ -6,12 +6,12 @@
 		
 				<view class="u-f-ac" hover-class="paper-right-popup-h" @tap='addfriend'>
 		
-					<view class="iconfont icon-soushuo-copy" ></view>
+					<view class="qfont icon-soushuo-copy" ></view>
 					 添加糗友
 		
 				</view>
 				 <view class="u-f-ac" hover-class="paper-right-popup-h" @tap="clear">
-					<view class="iconfont icon-qingchu1"> </view>
+					<view class="qfont icon-qingchu1"> </view>
 					 清除糗友
 				</view> 
 			</view>

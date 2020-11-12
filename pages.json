@@ -49,12 +49,16 @@
 						}
 		},{
             "path" : "pages/home/home",
-            "style" : {}
-        }
-        ,{
+           "style" : {
+           	"app-plus": {
+           			  "bounce": "none", 
+           			  "titleNView": false
+           				}
+           			}
+           },{
             "path" : "pages/paper/paper",
            "style": {
-           	"enablePullDownRefresh":true,
+				"enablePullDownRefresh":true,
            	  "app-plus": {
            		"bounce": "none", 
            		"titleNView": {
@@ -83,8 +87,19 @@
             "path" : "pages/my/my",
 			
             "style" : {
-				
-				          }
+						 "navigationBarTitleText":"我",
+						 "app-plus":{
+						 	"titleNView":{
+						 		"buttons":[{/* "float":"right", */
+												"type":"menu" 
+											 }	 
+											 ]
+						 	},
+						 	"scrollIndicator":"none"
+						 	
+						 }
+						 
+						  }
 			
         }
         ,{
@@ -219,6 +234,40 @@
             		
             	}
             }
+        }
+        ,{
+            "path" : "pages/detail2/detail2",
+            "style" : {
+            	"navigationBarTitleText":"详情页",
+            	"app-plus":{
+            		"bounce":"none",
+            		"scrollIndicator":"none",
+            		"titleNView":{
+            			"buttons":[{"type":"menu"}]
+            		}
+            		
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/user-setting/user-setting",
+            "style" : {
+				"navigationBarTitleText": "设置"
+			}
+        }
+        ,{
+            "path" : "pages/changepassword/changepassword",
+            "style" : {
+				"navigationBarTitleText": "修改密码"
+			}
+        }
+        ,{
+            "path" : "pages/changeemail/changeemail",
+            "style" : {"navigationBarTitleText": "修改邮箱"}
+        }
+        ,{
+            "path" : "pages/user-set-userinfo/user-set-userinfo",
+            "style" : {"navigationBarTitleText": "修改资料"}
         }
     ],
 	"globalStyle": {

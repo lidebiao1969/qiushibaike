@@ -14,8 +14,8 @@
 
 <style>
 	/*每个页面公共css */
-	@import './common/font/iconfont.css';
-	
+	@import './common/font/qfont.css';
+	@import './common/font/mycommon.css';
  @import './common/uni.css'; 
  @import './common/animate.min.css';
 </style>

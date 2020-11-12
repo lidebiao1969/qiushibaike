@@ -13,14 +13,14 @@
 						<view >
 							<view > {{item.username}}</view>
 							<view >
-								<text class="iconfont " :class="[item.sex==0?'icon-nan':'icon-nv']">
+								<text class="qfont " :class="[item.sex==0?'icon-nan':'icon-nv']">
 								{{item.age}}
 								</text>
 							</view>
 						</view>
-						<view class="iconfont icon-add" v-if="!isguanzi" @tap="guanzi">
+						<view class="qfont icon-add" v-if="!isguanzi" @tap="guanzi">
 							关注
-							<text class="iconfont icon-close"></text>
+							<text class="qfont icon-close"></text>
 						</view>  
 					</view>
 					<!-- 第二行 -->
@@ -31,13 +31,11 @@
 						<image :src="item.titlepic" mode="widthFix" lazy-load></image> 
 						<!-- 视频 -->
 						<template v-if="item.video">
-							<view class="common-list-play iconfont icon-bofang-copy"></view>
+							<view class="common-list-play qfont icon-bofang-copy"></view>
 							<view class="common-list-playinfo">
 								{{item.video.looknum}} 次播放{{item.video.long}}
 							</view>
 						</template>
-						
-					
 					</view> 
 					
 					<view class="common-list-share" v-if="item.share">
@@ -50,9 +48,9 @@
 					<view class="common-list-r-4">
 						<view class="common-list-r-4-path">{{item.path}}</view>
 						<view class="common-list-r-4-comment">
-							<text class="iconfont icon-fenxiang">{{item.sharenum}}</text>
-							<text class="iconfont icon-pinglun">{{item.commentnum}}</text>
-							<text  class="iconfont icon-dianzan">{{item.goodnum}}</text>
+							<text class="qfont icon-fenxiang">{{item.sharenum}}</text>
+							<text class="qfont icon-pinglun">{{item.commentnum}}</text>
+							<text  class="qfont icon-dianzan">{{item.goodnum}}</text>
 						</view>
 					</view>
 				</view>

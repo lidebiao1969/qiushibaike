@@ -10,9 +10,9 @@
 							</view>
 						</view>
 						<view class="index-guanzi" @tap="guanzi">
-										<text class="guanzi iconfont" v-if="isguanzi" >&#xe664; 关注</text>		
-											<text class="guanzi iconfont" v-else>&#xe665; 已关注</text>	
-											<text class="iconfont"> &#xe66b;</text>
+										<text class="guanzi qfont" v-if="isguanzi" >&#xe664; 关注</text>		
+											<text class="guanzi qfont" v-else>&#xe665; 已关注</text>	
+											<text class="qfont"> &#xe66b;</text>
 							</view>
 					</view> 
 					
@@ -26,7 +26,7 @@
 							</view>
 							<view class="index-video" v-if="item.type=='video'">
 								<video show-fullscreen-btn :src="item.titlepic"  class="list2-img" objectFit="fill"></video>
-								<text class="iconfont index-play"> &#xe666;</text>
+								<text class="qfont index-play"> &#xe666;</text>
 								<text class="index-message">播放数:{{item.playnum}},时长:{{item.timelong}}</text>
 							</view>
 				
@@ -36,15 +36,15 @@
 				<view class="index-list4">
 						<view class="comment">
 							<view class="comment-ding" >
-								<text class="iconfont">&#xe6cc;</text>
+								<text class="qfont">&#xe6cc;</text>
 								<text style="margin: 0 5px;"  @click="dingcai('ding')">{{infornum.dingnum}}</text>
-								<text class="iconfont">&#xe62b;</text>
+								<text class="qfont">&#xe62b;</text>
 								<text  style="margin: 0 5px;"  @click="dingcai('cai')">{{infornum.cainum}}</text>
 							</view>
 							<view class="comment-share">
-								<text class="iconfont">&#xe69a;</text>
+								<text class="qfont">&#xe69a;</text>
 								<text style="margin: 0 5px;">{{item.commentnum}}</text>
-								<text class="iconfont">&#xe817;</text>
+								<text class="qfont">&#xe817;</text>
 								<text style="margin: 0 5px;">{{item.sharenum}}</text>
 							</view>
 							
@@ -81,8 +81,9 @@
 		},
 		methods:{
 		opendetail(){
+			/* this.$emit("submit",this.text) */
 				uni.navigateTo({
-					url:"../../pages/detail/detail?detailData="+ JSON.stringify(this.item)
+					url:"../../pages/detail2/detail2?detailData="+ JSON.stringify(this.item)
 				})
 			},
 		guanzi(){ 
